@@ -35,12 +35,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jetbrainsMono.variable} ${openSans.variable} font-mono antialiased min-h-screen flex flex-col`}
+        className={`${jetbrainsMono.variable} ${openSans.variable} antialiased min-h-screen flex flex-col`}
       >
-        <header className="bg-muted">
-          <NavigationMenu className="max-w-full justify-items-center">
-            <NavigationMenuList className="p-7 gap-8 justify-end w-full">
-              <NavigationMenuItem>
+        <header className="bg-muted max-w-full justify-items-center">
+          <NavigationMenu>
+            <NavigationMenuList className="p-7 gap-8">
+              <NavigationMenuItem className="">
                 <NavigationMenuLink
                   asChild
                   className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
@@ -53,7 +53,9 @@ export default function RootLayout({
                   asChild
                   className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
                 >
-                  <Link href="/about">About</Link>
+                  <Link href="/about">
+                    About
+                  </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -61,7 +63,9 @@ export default function RootLayout({
                   asChild
                   className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
                 >
-                  <Link href="/portfolio">Portfolio</Link>
+                  <Link href="/portfolio">
+                    Portfolio
+                  </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
