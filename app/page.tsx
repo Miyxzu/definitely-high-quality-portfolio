@@ -8,6 +8,7 @@ export default function Home() {
       <main>
         <div className="m-20 flex items-center justify-between gap-8">
           <h1 className="mx-20 text-3xl font-bold">Home</h1>
+          <h2></h2>
           <Image
             src="/definitely-high-quality-portfolio/TheSpy-4x.png"
             width={250}

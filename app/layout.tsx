@@ -3,14 +3,13 @@ import { JetBrains_Mono, Open_Sans } from "next/font/google";
 import "./globals.css";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
+import Image from "next/image";
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -37,39 +36,38 @@ export default function RootLayout({
       <body
         className={`${jetbrainsMono.variable} ${openSans.variable} antialiased min-h-screen flex flex-col`}
       >
-        <header className="bg-muted max-w-full justify-items-center">
-          <NavigationMenu>
-            <NavigationMenuList className="p-7 gap-8">
-              <NavigationMenuItem className="">
-                <NavigationMenuLink
-                  asChild
-                  className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
-                >
-                  <Link href="/">Home</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  asChild
-                  className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
-                >
-                  <Link href="/about">
-                    About
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  asChild
-                  className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
-                >
-                  <Link href="/portfolio">
-                    Portfolio
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+        <header className="bg-muted">
+          <div className="flex items-center">
+            <Link href="/" className="shrink-0 relative">
+              <Image
+                className="w-16 h-16 relative rounded-full ring-4 ring-white mr-auto ml-8 hover:opacity-40 transition-opacity duration-300"
+                src="/definitely-high-quality-portfolio/IMG_8927.jpg"
+                alt="TheSpy Logo"
+                width={1}
+                height={1}
+              />
+            </Link>
+            <NavigationMenu className="ml-auto mr-8">
+              <NavigationMenuList className="p-7 gap-8">
+                <NavigationMenuItem className="relative">
+                  <NavigationMenuLink
+                    asChild
+                    className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
+                  >
+                    <Link href="/about">About</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem className="relative">
+                  <NavigationMenuLink
+                    asChild
+                    className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
+                  >
+                    <Link href="/portfolio">Portfolio</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
         </header>
         {children}
       </body>
