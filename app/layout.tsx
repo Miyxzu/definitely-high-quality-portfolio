@@ -37,7 +37,7 @@ export default function RootLayout({
         className={`${jetbrainsMono.variable} ${openSans.variable} font-mono antialiased min-h-screen flex flex-col`}
       >
         <header className="bg-muted">
-          <div className="flex items-center">
+          <div className="flex items-center xl:max-w-7xl mx-auto">
             <Link href="/" className="shrink-0 relative">
               <Image
                 className="w-16 h-16 relative rounded-full ring-4 ring-white mr-auto ml-8 hover:opacity-40 transition-opacity duration-300"
@@ -47,7 +47,7 @@ export default function RootLayout({
                 height={1}
               />
             </Link>
-            <NavigationMenu className="ml-auto mr-8">
+            <NavigationMenu className="ml-auto">
               <NavigationMenuList className="p-7 gap-8">
                 <NavigationMenuItem className="relative">
                   <NavigationMenuLink
