@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jetbrainsMono.variable} ${openSans.variable} antialiased min-h-screen flex flex-col`}
+        className={`${jetbrainsMono.variable} ${openSans.variable} font-mono antialiased min-h-screen flex flex-col`}
       >
         <header className="bg-muted">
           <div className="flex items-center">
@@ -55,6 +55,14 @@ export default function RootLayout({
                     className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
                   >
                     <Link href="/about">About</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                {/* Doing this fixes the NavbarItem bug */}
+                <NavigationMenuItem className="hidden">
+                  <NavigationMenuLink
+                    asChild
+                    className={`${navigationMenuTriggerStyle()}`}
+                  >
                   </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem className="relative">
