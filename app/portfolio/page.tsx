@@ -18,12 +18,14 @@ export default function portfolio() {
             Repos of current/past projects that I have worked on
           </h2>
         </div>
-        <div className="grid grid-flow-col grid-rows-3">
+        <div className="my-10">
+          <div className="border-b border-gray-200 w-full mx-auto max-w-4xl"></div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 m-4">
           <div className="">
             <Card className="relative mx-auto w-full max-w-sm pt-0">
-              <div className="" />
               <CardHeader>
-                <CardTitle>cs-tutorials</CardTitle>
+                <CardTitle className="mt-5">cs-tutorials</CardTitle>
                 <CardDescription>
                   Repo with a variety of works that I have done in the past.
                 </CardDescription>
@@ -39,9 +41,8 @@ export default function portfolio() {
           </div>
           <div className="">
             <Card className="relative mx-auto w-full max-w-sm pt-0">
-              <div className="" />
               <CardHeader>
-                <CardTitle>KBG Team App</CardTitle>
+                <CardTitle className="mt-5">KBG Team App</CardTitle>
                 <CardDescription>
                   Small app designed to randomize team assignments for a game.
                 </CardDescription>
@@ -49,6 +50,76 @@ export default function portfolio() {
               <CardFooter>
                 <Button className="w-full" asChild>
                   <Link href="https://github.com/Miyxzu/KBGTeamApp">
+                    View Repo
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          </div>
+          <div className="">
+            <Card className="relative mx-auto w-full max-w-sm pt-0">
+              <CardHeader>
+                <CardTitle className="mt-5">testing-extension</CardTitle>
+                <CardDescription>
+                  Browser extension that I had created as a part of coursework for a friend, designed around a to-do list that will prevent usuage of certain websites until the user has completed their tasks.
+                </CardDescription>
+              </CardHeader>
+              <CardFooter>
+                <Button className="w-full" asChild>
+                  <Link href="https://github.com/Miyxzu/testing-extension">
+                    View Repo
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 m-4">
+          <div className="">
+            <Card className="relative mx-auto w-full max-w-sm pt-0">
+              <CardHeader>
+                <CardTitle className="mt-5"></CardTitle>
+                <CardDescription>
+
+                </CardDescription>
+              </CardHeader>
+              <CardFooter>
+                <Button className="w-full" asChild>
+                  <Link href="https://github.com/Miyxzu/">
+                    View Repo
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          </div>
+          <div className="">
+            <Card className="relative mx-auto w-full max-w-sm pt-0">
+              <CardHeader>
+                <CardTitle className="mt-5"></CardTitle>
+                <CardDescription>
+
+                </CardDescription>
+              </CardHeader>
+              <CardFooter>
+                <Button className="w-full" asChild>
+                  <Link href="https://github.com/Miyxzu/">
+                    View Repo
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          </div>
+          <div className="">
+            <Card className="relative mx-auto w-full max-w-sm pt-0">
+              <CardHeader>
+                <CardTitle className="mt-5"></CardTitle>
+                <CardDescription>
+
+                </CardDescription>
+              </CardHeader>
+              <CardFooter>
+                <Button className="w-full" asChild>
+                  <Link href="https://github.com/Miyxzu/">
                     View Repo
                   </Link>
                 </Button>
