@@ -40,9 +40,9 @@ export default function RootLayout({
           <div className="flex items-center xl:max-w-7xl mx-auto">
             <Link href="/" className="shrink-0 relative">
               <Image
-                className="w-16 h-16 relative rounded-full ring-4 ring-white mr-auto ml-8 hover:opacity-40 transition-opacity duration-300"
+                className="w-12 h-12 relative rounded-full ring-4 ring-white mr-auto ml-8 hover:opacity-40 transition-opacity duration-300"
                 src="/definitely-high-quality-portfolio/IMG_8927.png"
-                alt="TheSpy Logo"
+                alt=""
                 width={1}
                 height={1}
               />
@@ -52,7 +52,7 @@ export default function RootLayout({
                 <NavigationMenuItem className="relative">
                   <NavigationMenuLink
                     asChild
-                    className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
+                    className={`${navigationMenuTriggerStyle()} bg-transparent hover:text-muted-foreground hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
                   >
                     <Link href="/about">About</Link>
                   </NavigationMenuLink>
@@ -62,13 +62,12 @@ export default function RootLayout({
                   <NavigationMenuLink
                     asChild
                     className={`${navigationMenuTriggerStyle()}`}
-                  >
-                  </NavigationMenuLink>
+                  ></NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem className="relative">
                   <NavigationMenuLink
                     asChild
-                    className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
+                    className={`${navigationMenuTriggerStyle()} bg-transparent hover:text-muted-foreground hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
                   >
                     <Link href="/portfolio">Portfolio</Link>
                   </NavigationMenuLink>
@@ -78,6 +77,42 @@ export default function RootLayout({
           </div>
         </header>
         {children}
+        <footer className="bg-muted text-center py-4 mt-auto">
+          <div className="flex items-center justify-center gap-20">
+            <Link href="https://instagram.com/miyxzu">
+              <Image
+                src="/definitely-high-quality-portfolio/instagram.svg"
+                width={25}
+                height={25}
+                alt="Instagram"
+              />
+            </Link>
+            <Link href="https://twitter.com/gravityaccel">
+              <Image
+                src="/definitely-high-quality-portfolio/x.svg"
+                width={25}
+                height={25}
+                alt="X (Twitter)"
+              />
+            </Link>
+            <Link href="https://youtube.com/@exsu">
+              <Image
+                src="/definitely-high-quality-portfolio/youtube.svg"
+                width={25}
+                height={25}
+                alt="YouTube"
+              />
+            </Link>
+            <Link href="https://github.com/miyxzu">
+              <Image
+                src="/definitely-high-quality-portfolio/github.svg"
+                width={25}
+                height={25}
+                alt="GitHub"
+              />
+            </Link>
+          </div>
+        </footer>
       </body>
     </html>
   );

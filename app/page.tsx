@@ -8,7 +8,7 @@ export default function Home() {
       <main>
         <div className="my-20 flex items-center justify-between gap-8 mx-auto xl:max-w-4xl">
           <div className="ml-10 flex flex-col gap-4">
-            <h1 className="text-3xl font-bold">Miyxzu</h1>
+            <h1 className="text-3xl font-bold">Miyxzu.</h1>
             <h2 className="text-muted-foreground">
               "Rooted in Legacy. Driven by Victory"
             </h2>
