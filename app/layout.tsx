@@ -41,7 +41,7 @@ export default function RootLayout({
             <Link href="/" className="shrink-0 relative">
               <Image
                 className="w-16 h-16 relative rounded-full ring-4 ring-white mr-auto ml-8 hover:opacity-40 transition-opacity duration-300"
-                src="/definitely-high-quality-portfolio/IMG_8927.jpg"
+                src="/definitely-high-quality-portfolio/IMG_8927.png"
                 alt="TheSpy Logo"
                 width={1}
                 height={1}
