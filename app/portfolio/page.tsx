@@ -82,7 +82,7 @@ export default function portfolio() {
           <div className="flex xl:ml-44">
             <Card className="group relative mx-auto w-full max-w-sm xl:max-w-md pt-0 h-full flex flex-col transition-shadow duration-300 hover:shadow-[0_0_24px_4px_rgba(58,54,84,0.45)]">
               <CardHeader className="grow">
-                <CardTitle className="mt-5">Project Nova</CardTitle>
+                <CardTitle className="mt-5">Marine Hunters</CardTitle>
                 <CardDescription>
                   A Battleship-esque game that is designed around finding marine
                   life in the ocean to win the game.
