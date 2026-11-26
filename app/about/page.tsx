@@ -35,7 +35,7 @@ export default function about() {
             <CardHeader>
               <CardTitle>Skill</CardTitle>
               <CardDescription>
-                I have experience in a variety of programming languages, including Python, Java, C#. I have a strong understanding of data structures and algorithms, and I am always eager to learn new technologies and frameworks.
+                I have experience in a variety of programming languages, including Python, Java, C#. I have a strong understanding of data structures and algorithms, and I am always eager to learn new technologies and frameworks. I am also undertaking studies in cybersecurity, mainly SoC and Pentesting practices.
               </CardDescription>
             </CardHeader>
           </Card>
