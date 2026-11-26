@@ -1,12 +1,41 @@
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
   CardDescription,
+  CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
+function ProjectDetails({
+  role,
+  challenges,
+}: {
+  role?: string;
+  challenges?: string;
+}) {
+  if (!role && !challenges) return null;
+
+  return (
+    <CardContent className="space-y-3 border-t border-gray-200 pt-4">
+      {role && (
+        <div>
+          <h3 className="text-sm font-semibold">Role</h3>
+          <p className="text-sm text-muted-foreground">{role}</p>
+        </div>
+      )}
+      {challenges && (
+        <div>
+          <h3 className="text-sm font-semibold">Challenges</h3>
+          <p className="text-sm text-muted-foreground">{challenges}</p>
+        </div>
+      )}
+    </CardContent>
+  );
+}
 
 export default function portfolio() {
   return (
@@ -32,8 +61,22 @@ export default function portfolio() {
                   Repo with a variety of works that I have done in the past.
                 </CardDescription>
               </CardHeader>
+              <ProjectDetails
+                role="Developer"
+                challenges="Finding projects to work on and showcase my skills"
+              />
+              <CardContent className="flex flex-wrap gap-2">
+                <Badge variant="secondary">Java</Badge>
+                <Badge variant="secondary">HTML</Badge>
+                <Badge variant="secondary">C / C#</Badge>
+                <Badge variant="secondary">JavaScript</Badge>
+                <Badge variant="outline">Mixed</Badge>
+              </CardContent>
               <CardFooter>
-                <Button className="w-full transition-all duration-200 hover:bg-secondary-foreground hover:text-secondary hover:border hover:border-secondary-foreground" asChild>
+                <Button
+                  className="w-full transition-all duration-200 hover:bg-secondary-foreground hover:text-secondary hover:border hover:border-secondary-foreground"
+                  asChild
+                >
                   <Link href="https://github.com/Miyxzu/cs-tutorials">
                     View Repo
                   </Link>
@@ -44,14 +87,26 @@ export default function portfolio() {
           <div className="flex">
             <Card className="group relative mx-auto w-full max-w-sm xl:max-w-md pt-0 h-full flex flex-col transition-shadow duration-300 hover:shadow-[0_0_24px_4px_rgba(58,54,84,0.45)]">
               <CardHeader className="grow">
-                <CardTitle className="mt-5">KBG Team App</CardTitle>
+                <CardTitle className="mt-5">Bluesapp</CardTitle>
                 <CardDescription>
-                  Small app designed to randomize team assignments for a game.
+                  Whatsapp-style Clone using JavaFX
                 </CardDescription>
               </CardHeader>
+              <ProjectDetails
+                role="Developer"
+                challenges="Connecting the different frames and handling real-time updates"
+              />
+              <CardContent className="flex flex-wrap gap-2">
+                <Badge variant="secondary">Java</Badge>
+                <Badge variant="secondary">JavaFX</Badge>
+                <Badge variant="outline">Desktop GUI</Badge>
+              </CardContent>
               <CardFooter>
-                <Button className="w-full transition-all duration-200 hover:bg-secondary-foreground hover:text-secondary hover:border hover:border-secondary-foreground" asChild>
-                  <Link href="https://github.com/Miyxzu/KBGTeamApp">
+                <Button
+                  className="w-full transition-all duration-200 hover:bg-secondary-foreground hover:text-secondary hover:border hover:border-secondary-foreground"
+                  asChild
+                >
+                  <Link href="https://github.com/Miyxzu/DSAProj">
                     View Repo
                   </Link>
                 </Button>
@@ -63,11 +118,23 @@ export default function portfolio() {
               <CardHeader className="grow">
                 <CardTitle className="mt-5">JavaFX Wordle</CardTitle>
                 <CardDescription>
-                  A Wordle clone designed using JavaFX (Broken).
+                  A Wordle clone designed using JavaFX.
                 </CardDescription>
               </CardHeader>
+              <ProjectDetails
+                role="Developer"
+                challenges="Working with JavaFX to build a desktop GUI application for the first time"
+              />
+              <CardContent className="flex flex-wrap gap-2">
+                <Badge variant="secondary">Java</Badge>
+                <Badge variant="secondary">JavaFX</Badge>
+                <Badge variant="outline">Desktop GUI</Badge>
+              </CardContent>
               <CardFooter>
-                <Button className="w-full transition-all duration-200 hover:bg-secondary-foreground hover:text-secondary hover:border hover:border-secondary-foreground" asChild>
+                <Button
+                  className="w-full transition-all duration-200 hover:bg-secondary-foreground hover:text-secondary hover:border hover:border-secondary-foreground"
+                  asChild
+                >
                   <Link href="https://github.com/Miyxzu/finalproj">
                     View Repo
                   </Link>
@@ -88,8 +155,19 @@ export default function portfolio() {
                   life in the ocean to win the game.
                 </CardDescription>
               </CardHeader>
+              <ProjectDetails
+                role="Developer"
+                challenges="Building the AI logic and scoring system"
+              />
+              <CardContent className="flex flex-wrap gap-2">
+                <Badge variant="secondary">Java</Badge>
+                <Badge variant="outline">CLI</Badge>
+              </CardContent>
               <CardFooter>
-                <Button className="w-full transition-all duration-200 hover:bg-secondary-foreground hover:text-secondary hover:border hover:border-secondary-foreground" asChild>
+                <Button
+                  className="w-full transition-all duration-200 hover:bg-secondary-foreground hover:text-secondary hover:border hover:border-secondary-foreground"
+                  asChild
+                >
                   <Link href="https://github.com/Miyxzu/cs-tutorials/tree/main/Java/CS11002/assessmentFinal">
                     View Repo
                   </Link>
@@ -106,8 +184,23 @@ export default function portfolio() {
                   RP Pico as the interface for the game.
                 </CardDescription>
               </CardHeader>
+              <ProjectDetails
+                role="Developer"
+                challenges="Interfacing the RP Pico with the squash and working with http requests"
+              />
+              <CardContent className="flex flex-wrap gap-2">
+                <Badge variant="secondary">Python</Badge>
+                <Badge variant="secondary">JavaScript</Badge>
+                <Badge variant="secondary">HTML</Badge>
+                <Badge variant="secondary">HTTP</Badge>
+                <Badge variant="outline">RP Pico</Badge>
+                <Badge variant="outline">Squash Controller</Badge>
+              </CardContent>
               <CardFooter>
-                <Button className="w-full transition-all duration-200 hover:bg-secondary-foreground hover:text-secondary hover:border hover:border-secondary-foreground" asChild>
+                <Button
+                  className="w-full transition-all duration-200 hover:bg-secondary-foreground hover:text-secondary hover:border hover:border-secondary-foreground"
+                  asChild
+                >
                   <Link href="https://github.com/Miyxzu/cs-tutorials/tree/main/py/CS12001/hell">
                     View Repo
                   </Link>
@@ -125,8 +218,21 @@ export default function portfolio() {
                   completed their tasks.
                 </CardDescription>
               </CardHeader>
+              <ProjectDetails
+                role="Developer"
+                challenges="Managing browser extension permissions and enforcing task completion before site access"
+              />
+              <CardContent className="flex flex-wrap gap-2">
+                <Badge variant="secondary">JavaScript</Badge>
+                <Badge variant="secondary">HTML</Badge>
+                <Badge variant="secondary">CSS</Badge>
+                <Badge variant="outline">Browser Extension</Badge>
+              </CardContent>
               <CardFooter>
-                <Button className="w-full transition-all duration-200 hover:bg-secondary-foreground hover:text-secondary hover:border hover:border-secondary-foreground" asChild>
+                <Button
+                  className="w-full transition-all duration-200 hover:bg-secondary-foreground hover:text-secondary hover:border hover:border-secondary-foreground"
+                  asChild
+                >
                   <Link href="https://github.com/Miyxzu/testing-extension">
                     View Repo
                   </Link>

@@ -72,21 +72,21 @@ export default function RootLayout({
                     <Link href="/portfolio">Portfolio</Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
+                <NavigationMenuItem className="relative">
+                  <NavigationMenuLink
+                    asChild
+                    className={`${navigationMenuTriggerStyle()} bg-transparent hover:text-muted-foreground hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
+                  >
+                    <Link href="/cv">CV</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
           </div>
         </header>
         {children}
-        <footer className="bg-muted text-center py-4 mt-auto">
-          <div className="flex items-center justify-center gap-20">
-            <Link href="https://instagram.com/miyxzu">
-              <Image
-                src="/definitely-high-quality-portfolio/instagram.svg"
-                width={25}
-                height={25}
-                alt="Instagram"
-              />
-            </Link>
+        <footer className="bg-muted text-center py-2 mt-auto">
+          <div className="flex items-center justify-center gap-10">
             <Link href="https://twitter.com/gravityaccel">
               <Image
                 src="/definitely-high-quality-portfolio/x.svg"
