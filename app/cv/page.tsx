@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-const CV_PATH = "/definitely-high-quality-portfolio/example_used_cv.pdf";
+const CV_PATH = "/definitely-high-quality-portfolio/Example_Used_CV.pdf";
 
 export default function Cv() {
   return (
