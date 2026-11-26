@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
   basePath: "/definitely-high-quality-portfolio",
 
   output: "export",
+  
+  allowedDevOrigins: ['134.36.36.182'],
 
   images: {
     unoptimized: true,

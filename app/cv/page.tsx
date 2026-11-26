@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-const CV_PATH = "/definitely-high-quality-portfolio/Example_Used_CV.pdf";
+const CV_PATH = "/definitely-high-quality-portfolio/example_used_cv.pdf";
 
 export default function Cv() {
   return (
@@ -25,6 +25,11 @@ export default function Cv() {
             title="CV"
             className="w-full h-[80vh] rounded-lg shadow-lg bg-card"
           />
+        </div>
+        <div className="my-10">
+          <div className="border-b border-gray-200 w-full mx-auto max-w-4xl text-sm">
+                      Link to targeted <a href="example_job_advert.pdf" target="_blank" rel="noopener noreferrer" className="underline">Job Listing</a>
+          </div>
         </div>
       </main>
     </div>
